@@ -1,0 +1,4 @@
+- [x] Refactor `ActionCard` to a vertical layout
+- [x] Increase icon size and add themed glow to `ActionCard`
+- [x] Update `HomeActions` layout if necessary
+- [x] Verify changes with Previews

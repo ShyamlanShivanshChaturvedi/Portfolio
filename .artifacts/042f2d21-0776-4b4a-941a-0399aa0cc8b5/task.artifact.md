@@ -1,0 +1,6 @@
+- [x] Implement initial `LoadingScreen`
+- [x] Enhance `LoadingScreen` with Logo and Animations
+    - [x] Add `InfiniteTransition` for pulsing logo
+    - [x] Integrate `app_logo.jpg` with styled container
+    - [x] Update layout and theme colors
+- [/] Update and verify Previews

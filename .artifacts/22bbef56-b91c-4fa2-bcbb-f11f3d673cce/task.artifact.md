@@ -1,0 +1,4 @@
+- [x] Darken `DeepNavy` and `CardBg` in `Color.kt`
+- [x] Verify `BottomNavBar` visibility against new background
+- [x] Verify `Home` screen aesthetics
+- [x] Update walkthrough with new "Deep Dark" preview

@@ -1,0 +1,5 @@
+- [x] Create `Skill` data model
+- [x] Implement `SkillsScreen` with adaptive grid
+- [x] Add Java, Spring Boot, Kotlin, Android, C, C++, and Golang to the list
+- [x] Integrate `SkillsScreen` into `AppNavigation`
+- [x] Verify UI with Compose Previews

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+    <string name="home_nav">Home</string>
+    <string name="skills_nav">Skills</string>
+    <string name="projects_nav">Projects</string>
+    <string name="about_nav">About</string>
+    <string name="profile_nav">Profile</string>
+
+    <string name="home">Home</string>
+    <string name="skills">Skills</string>
+    <string name="projects">Projects</string>
+    <string name="about">About</string>
+    <string name="profile">Profile</string>
+
+    <string name="github_link">http://github.com</string>
+    <string name="linkdin_link">http://github.com</string>
+    <string name="email_my">shivanshshyamlan@gmail.com</string>
+    <string name="project_portfolio">http://github.com</string>
+</resources>

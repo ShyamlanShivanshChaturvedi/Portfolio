@@ -1,0 +1,6 @@
+- [x] Update `Screen` sealed class in `screen.kt`
+- [x] Create `Project` data model in `com.example.portfolio.projects.model`
+- [x] Create `ProjectsScreen` UI in `com.example.portfolio.projects.ui`
+- [x] Register `Projects` screen in `AppNavigation`
+- [x] Update `HomeActions` and `Home` to enable navigation to Projects
+- [x] Verify navigation and UI in Compose Preview
