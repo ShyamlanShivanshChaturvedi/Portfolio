@@ -42,6 +42,8 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -130,6 +132,8 @@ fun RegisterScreen(
 
         var email by rememberSaveable { mutableStateOf("") }
         var pass by rememberSaveable { mutableStateOf("") }
+        var confirmPass by rememberSaveable { mutableStateOf("") }
+
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -195,10 +199,37 @@ fun RegisterScreen(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         singleLine = true,
+                        visualTransformation = PasswordVisualTransformation(),
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next, keyboardType = KeyboardType.Password),
+                        keyboardActions = KeyboardActions(
+                            onNext = { focusManager.moveFocus(FocusDirection.Down) }
+                        ),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedTextColor = buttonBackgroundColor,
+                            unfocusedTextColor = buttonBackgroundColor,
+                            unfocusedLabelColor = buttonBackgroundColor,
+                            focusedLabelColor = buttonBackgroundColor,
+                            focusedBorderColor = buttonBackgroundColor,
+                            unfocusedBorderColor = buttonBackgroundColor
+                        )
+                    )
+                }
+
+                item {Spacer(Modifier.height(16.dp))}
+
+                item {
+                    OutlinedTextField(
+                        value = confirmPass,
+                        onValueChange = { confirmPass = it },
+                        label = { Text("confirm password") },
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        singleLine = true,
+                        visualTransformation = PasswordVisualTransformation(),
                         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next, keyboardType = KeyboardType.Password),
                         keyboardActions = KeyboardActions(
                             onNext = {
-                                if (email.isNotBlank() && pass.isNotBlank()) {
+                                if (email.isNotBlank() && pass.isNotBlank() && pass.equals(confirmPass)) {
                                     viewModel.signUp(email = email, pass = pass, displayName = displayName, bio = bio)
                                     viewModel.saveProfile(displayName,bio)
                                 }
@@ -234,7 +265,7 @@ fun RegisterScreen(
                             .fillMaxWidth()
                             .height(56.dp),
                         shape = RoundedCornerShape(12.dp),
-                        enabled = email.isNotBlank() && pass.isNotBlank(),
+                        enabled = email.isNotBlank() && pass.isNotBlank() && pass.equals(confirmPass),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = buttonBackgroundColor,
                             contentColor = buttonContentColor
