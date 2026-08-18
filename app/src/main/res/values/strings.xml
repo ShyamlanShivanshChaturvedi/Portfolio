@@ -12,8 +12,8 @@
     <string name="about">About</string>
     <string name="profile">Profile</string>
 
-    <string name="github_link">http://github.com</string>
-    <string name="linkdin_link">http://github.com</string>
-    <string name="email_my">shivanshshyamlan@gmail.com</string>
-    <string name="project_portfolio">http://github.com</string>
+    <string name="github_link">https://github.com/ShyamlanShivanshChaturvedi</string>
+    <string name="linkdin_link">https://www.linkedin.com/in/shyamlanshivanshchaturvedi/</string>
+    <string name="email_my">shyamlanshivanshchaturvedi@gmail.com</string>
+    <string name="project_portfolio">http://github.comhttps://github.com/ShyamlanShivanshChaturvedi/Portfolio.git</string>
 </resources>
